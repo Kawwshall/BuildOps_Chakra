@@ -1,6 +1,5 @@
 import frappe
 from frappe.model.document import Document
 
-
-class Operator(Document):
+class AttendanceDiscrepancy(Document):
     pass

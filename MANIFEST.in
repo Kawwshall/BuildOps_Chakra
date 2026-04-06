@@ -1,2 +1,2 @@
 include MANIFEST.in
-recursive-include qaiff_ops *.json *.js *.css *.html *.py *.txt
+recursive-include buildops *.json *.js *.css *.html *.py *.txt
