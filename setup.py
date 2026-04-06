@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="buildops",
+    name="chakra",
     version="1.0.0",
-    description="BuildOps Chakra - Factory Operations ERP",
+    description="Chakra - Factory Operations ERP by BuildOps",
     author="BuildOps",
     packages=find_packages(),
     zip_safe=False,

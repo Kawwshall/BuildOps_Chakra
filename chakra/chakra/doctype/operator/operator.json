@@ -1,7 +1,7 @@
 {
   "name": "Operator",
   "doctype": "DocType",
-  "module": "BuildOps",
+  "module": "Chakra",
   "engine": "InnoDB",
   "autoname": "field:mobile",
   "title_field": "full_name",
@@ -23,10 +23,17 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "user_id",
+      "fieldtype": "Link",
+      "label": "Linked User",
+      "options": "User",
+      "permlevel": 1
+    },
+    {
       "fieldname": "aadhar_number",
       "fieldtype": "Data",
       "label": "Aadhar Number",
-      "in_list_view": 1
+      "permlevel": 1
     },
     {
       "fieldname": "role_type",
@@ -73,7 +80,8 @@
       "fieldtype": "Select",
       "label": "Assignment",
       "options": "Available\nDeployed\nOn Break",
-      "default": "Available"
+      "default": "Available",
+      "read_only": 1
     },
     {
       "fieldname": "sec_pay",
@@ -83,22 +91,26 @@
     {
       "fieldname": "upi_id",
       "fieldtype": "Data",
-      "label": "UPI ID"
+      "label": "UPI ID",
+      "permlevel": 1
     },
     {
       "fieldname": "bank_account",
       "fieldtype": "Data",
-      "label": "Bank Account Number"
+      "label": "Bank Account Number",
+      "permlevel": 1
     },
     {
       "fieldname": "ifsc_code",
       "fieldtype": "Data",
-      "label": "IFSC Code"
+      "label": "IFSC Code",
+      "permlevel": 1
     },
     {
       "fieldname": "bank_name",
       "fieldtype": "Data",
-      "label": "Bank Name"
+      "label": "Bank Name",
+      "permlevel": 1
     }
   ],
   "permissions": [
@@ -131,8 +143,19 @@
       "read": 1,
       "write": 1,
       "create": 0,
-      "delete": 0,
-      "if_owner": 1
+      "delete": 0
+    },
+    {
+      "role": "System Manager",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "FF Operator",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1
     }
   ]
 }

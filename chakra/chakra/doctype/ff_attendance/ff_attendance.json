@@ -1,7 +1,7 @@
 {
   "name": "FF Attendance",
   "doctype": "DocType",
-  "module": "BuildOps",
+  "module": "Chakra",
   "engine": "InnoDB",
   "autoname": "format:ATT-{####}",
   "title_field": "operator_name",
@@ -51,6 +51,13 @@
       "fieldname": "daily_rate",
       "fieldtype": "Currency",
       "label": "Daily Rate",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "payable_amount",
+      "fieldtype": "Currency",
+      "label": "Payable Amount",
+      "read_only": 1,
       "in_list_view": 1
     },
     {

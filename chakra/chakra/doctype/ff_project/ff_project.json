@@ -1,7 +1,7 @@
 {
   "name": "FF Project",
   "doctype": "DocType",
-  "module": "BuildOps",
+  "module": "Chakra",
   "engine": "InnoDB",
   "autoname": "field:project_name",
   "title_field": "project_name",

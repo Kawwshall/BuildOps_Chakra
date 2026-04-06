@@ -1,7 +1,7 @@
 {
   "name": "Attendance Discrepancy",
   "doctype": "DocType",
-  "module": "BuildOps",
+  "module": "Chakra",
   "engine": "InnoDB",
   "autoname": "format:DISC-{####}",
   "title_field": "operator_name",
@@ -15,12 +15,13 @@
     {"fieldname": "reason", "fieldtype": "Small Text", "label": "Reason", "reqd": 1},
     {"fieldname": "sec_resolution", "fieldtype": "Section Break", "label": "Resolution"},
     {"fieldname": "resolution_status", "fieldtype": "Select", "label": "Status", "options": "Pending\nApproved\nRejected", "default": "Pending", "in_list_view": 1},
-    {"fieldname": "resolved_by", "fieldtype": "Data", "label": "Resolved By"},
+    {"fieldname": "resolved_by", "fieldtype": "Data", "label": "Resolved By", "read_only": 1},
+    {"fieldname": "resolved_on", "fieldtype": "Datetime", "label": "Resolved On", "read_only": 1},
     {"fieldname": "resolution_note", "fieldtype": "Small Text", "label": "Resolution Note"}
   ],
   "permissions": [
     {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1},
     {"role": "FF Chief", "read": 1, "write": 1, "create": 0, "delete": 0, "report": 1},
-    {"role": "FF Operator", "read": 1, "write": 0, "create": 1, "delete": 0, "if_owner": 1}
+    {"role": "FF Operator", "read": 1, "write": 0, "create": 1, "delete": 0}
   ]
 }
